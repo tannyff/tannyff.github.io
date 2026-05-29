@@ -665,6 +665,11 @@
         font-family:'Jost',sans-serif;">
         Пропустить и посмотреть результат
       </button>
+      <div style="font-size:11px;color:#A09080;text-align:center;margin-top:8px;line-height:1.6">
+        Нажимая кнопку, вы соглашаетесь с
+        <a href="#" onclick="openModal('modal-consent');return false;" style="color:#A0714F;text-decoration:underline">обработкой персональных данных</a> и
+        <a href="#" onclick="openModal('modal-privacy');return false;" style="color:#A0714F;text-decoration:underline">политикой конфиденциальности</a>
+      </div>
     </div>
 
     <!-- КНОПКИ НАВИГАЦИИ -->
@@ -714,7 +719,10 @@
 
     <div class="footer">
       Татьяна Мунарева · Таргетолог · @tannyff_target<br>
-      Работаю официально по договору · ИП
+      Работаю официально по договору · ИП<br><br>
+      <a href="#" onclick="openModal('modal-privacy');return false;" style="color:var(--muted,#8C7B6E);text-decoration:underline;font-size:12px">Политика конфиденциальности</a>
+      &nbsp;·&nbsp;
+      <a href="#" onclick="openModal('modal-consent');return false;" style="color:var(--muted,#8C7B6E);text-decoration:underline;font-size:12px">Согласие на обработку данных</a>
     </div>
   </div>
 
@@ -979,5 +987,137 @@ ${lines}
   }
 
 </script>
+
+<!-- МОДАЛЬНОЕ ОКНО: Политика конфиденциальности -->
+<div id="modal-privacy" style="display:none;position:fixed;inset:0;z-index:1000;background:rgba(44,40,37,.75);backdrop-filter:blur(4px);overflow-y:auto;padding:40px 16px">
+  <div style="max-width:680px;margin:0 auto;background:#FDFAF7;border-radius:20px;padding:44px 36px;position:relative">
+    <button onclick="closeModal('modal-privacy')" style="position:absolute;top:18px;right:22px;background:none;border:none;font-size:26px;cursor:pointer;color:#8C7B6E;line-height:1">×</button>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:#2C2825;margin-bottom:6px">Политика конфиденциальности</div>
+    <div style="font-size:12px;color:#8C7B6E;margin-bottom:28px">Последнее обновление: 1 июня 2025 г.</div>
+    <div style="font-size:14px;color:#2C2825;line-height:1.85;display:flex;flex-direction:column;gap:20px">
+      <div>
+        <div style="font-size:15px;font-weight:500;margin-bottom:6px">1. Общие положения</div>
+        <p>Настоящая Политика конфиденциальности определяет порядок обработки персональных данных пользователей сайта <strong>tannyff.github.io</strong>.</p>
+        <p style="margin-top:8px">Оператором персональных данных является индивидуальный предприниматель <strong>Мунарев Александр</strong>, действующий в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных».</p>
+        <p style="margin-top:8px">Используя Сайт и оставляя свои данные, вы подтверждаете согласие на обработку персональных данных на указанных условиях.</p>
+      </div>
+      <div>
+        <div style="font-size:15px;font-weight:500;margin-bottom:6px">2. Какие данные мы собираем</div>
+        <p>При прохождении чек-листа и заполнении формы мы можем собирать:</p>
+        <ul style="margin-top:8px;padding-left:20px;display:flex;flex-direction:column;gap:4px">
+          <li>Имя</li>
+          <li>Номер телефона</li>
+          <li>Ответы на вопросы чек-листа (информация о бизнесе)</li>
+        </ul>
+        <p style="margin-top:8px">Также автоматически собираются обезличенные технические данные: IP-адрес, тип браузера, время посещения.</p>
+      </div>
+      <div>
+        <div style="font-size:15px;font-weight:500;margin-bottom:6px">3. Цели обработки данных</div>
+        <ul style="padding-left:20px;display:flex;flex-direction:column;gap:4px">
+          <li>Связь с вами для предоставления консультации</li>
+          <li>Анализ готовности бизнеса к рекламе</li>
+          <li>Заключение и исполнение договора на оказание услуг</li>
+          <li>Информирование об услугах (только с вашего согласия)</li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-size:15px;font-weight:500;margin-bottom:6px">4. Правовые основания обработки</div>
+        <ul style="padding-left:20px;display:flex;flex-direction:column;gap:4px">
+          <li>Согласие субъекта персональных данных (ст. 6 ч. 1 п. 1 ФЗ-152)</li>
+          <li>Исполнение договора, стороной которого является субъект (ст. 6 ч. 1 п. 5 ФЗ-152)</li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-size:15px;font-weight:500;margin-bottom:6px">5. Передача данных третьим лицам</div>
+        <p>Персональные данные не передаются третьим лицам, за исключением:</p>
+        <ul style="margin-top:8px;padding-left:20px;display:flex;flex-direction:column;gap:4px">
+          <li>Случаев, прямо предусмотренных законодательством РФ</li>
+          <li>Сервиса Telegram (для технической доставки уведомлений) — согласно Политике конфиденциальности Telegram</li>
+        </ul>
+        <p style="margin-top:8px">Мы не продаём и не передаём ваши данные рекламным сетям и иным коммерческим структурам.</p>
+      </div>
+      <div>
+        <div style="font-size:15px;font-weight:500;margin-bottom:6px">6. Хранение и защита данных</div>
+        <p>Данные хранятся на защищённых серверах. Срок хранения — до достижения целей обработки или до отзыва согласия, но не более <strong>3 лет</strong> с момента получения.</p>
+      </div>
+      <div>
+        <div style="font-size:15px;font-weight:500;margin-bottom:6px">7. Ваши права</div>
+        <p>В соответствии с ФЗ-152 вы вправе:</p>
+        <ul style="margin-top:8px;padding-left:20px;display:flex;flex-direction:column;gap:4px">
+          <li>Получить информацию об обработке ваших данных</li>
+          <li>Потребовать уточнения, блокирования или уничтожения данных</li>
+          <li>Отозвать согласие на обработку в любой момент</li>
+          <li>Обжаловать действия Оператора в Роскомнадзор</li>
+        </ul>
+        <p style="margin-top:8px">Для реализации прав обратитесь: <strong>munarev@sksural.com</strong></p>
+      </div>
+      <div>
+        <div style="font-size:15px;font-weight:500;margin-bottom:6px">8. Cookie</div>
+        <p>Сайт не использует файлы cookie для отслеживания пользователей. Данные сессии хранятся только в памяти браузера и удаляются при закрытии вкладки.</p>
+      </div>
+      <div>
+        <div style="font-size:15px;font-weight:500;margin-bottom:6px">9. Изменения в Политике</div>
+        <p>Оператор вправе вносить изменения в настоящую Политику. Актуальная версия всегда доступна на Сайте.</p>
+      </div>
+      <div>
+        <div style="font-size:15px;font-weight:500;margin-bottom:6px">10. Контакты оператора</div>
+        <p>ИП Мунарев Александр<br>Email: <strong>munarev@sksural.com</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- МОДАЛЬНОЕ ОКНО: Согласие на обработку данных -->
+<div id="modal-consent" style="display:none;position:fixed;inset:0;z-index:1000;background:rgba(44,40,37,.75);backdrop-filter:blur(4px);overflow-y:auto;padding:40px 16px">
+  <div style="max-width:680px;margin:0 auto;background:#FDFAF7;border-radius:20px;padding:44px 36px;position:relative">
+    <button onclick="closeModal('modal-consent')" style="position:absolute;top:18px;right:22px;background:none;border:none;font-size:26px;cursor:pointer;color:#8C7B6E;line-height:1">×</button>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:#2C2825;margin-bottom:6px">Согласие на обработку персональных данных</div>
+    <div style="font-size:12px;color:#8C7B6E;margin-bottom:28px">В соответствии с Федеральным законом № 152-ФЗ «О персональных данных»</div>
+    <div style="font-size:14px;color:#2C2825;line-height:1.85;display:flex;flex-direction:column;gap:20px">
+      <div style="background:#F5EDE3;border-radius:12px;padding:18px 22px">
+        <p>Я, субъект персональных данных, проходя чек-лист на сайте <strong>tannyff.github.io/tannyffCL.github.io</strong>, даю своё согласие индивидуальному предпринимателю <strong>Мунареву Александру</strong> на обработку моих персональных данных на условиях, изложенных ниже.</p>
+      </div>
+      <div>
+        <div style="font-size:15px;font-weight:500;margin-bottom:6px">Перечень персональных данных</div>
+        <ul style="padding-left:20px;display:flex;flex-direction:column;gap:4px">
+          <li>Имя</li>
+          <li>Номер телефона</li>
+          <li>Ответы на вопросы чек-листа (информация о бизнесе)</li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-size:15px;font-weight:500;margin-bottom:6px">Цели обработки</div>
+        <ul style="padding-left:20px;display:flex;flex-direction:column;gap:4px">
+          <li>Связь для предоставления консультации по результатам чек-листа</li>
+          <li>Заключение и исполнение договора на оказание услуг</li>
+          <li>Информирование об услугах Оператора</li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-size:15px;font-weight:500;margin-bottom:6px">Срок действия согласия</div>
+        <p>С момента предоставления и до достижения целей обработки, но не более <strong>3 (трёх) лет</strong>.</p>
+      </div>
+      <div>
+        <div style="font-size:15px;font-weight:500;margin-bottom:6px">Отзыв согласия</div>
+        <p>Вы вправе отозвать согласие, направив уведомление на <strong>munarev@sksural.com</strong>. После отзыва Оператор уничтожит данные в течение 30 дней.</p>
+      </div>
+      <div style="background:#E8D5C0;border-radius:12px;padding:14px 18px;font-size:13px;color:#7A5238">
+        Нажимая кнопку «Получить результат» или «Пропустить и посмотреть результат», я подтверждаю согласие с настоящим документом и Политикой конфиденциальности.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal(id){document.getElementById(id).style.display='block';document.body.style.overflow='hidden'}
+function closeModal(id){document.getElementById(id).style.display='none';document.body.style.overflow=''}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')['modal-privacy','modal-consent'].forEach(closeModal)});
+window.addEventListener('load',function(){
+  ['modal-privacy','modal-consent'].forEach(function(id){
+    document.getElementById(id).addEventListener('click',function(e){if(e.target===this)closeModal(id)});
+  });
+});
+</script>
+
 </body>
 </html>
