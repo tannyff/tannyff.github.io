@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Татьяна | AI и личный бренд</title>
+<meta name="description" content="Бесплатные гайды по Claude и нейросетям, промпты и шаблоны для блога. Строю личный бренд и продукты с ИИ.">
+<meta property="og:title" content="Татьяна — бесплатные материалы по ИИ">
+<meta property="og:description" content="Гайд по Claude, промпты и шаблоны для блога. Забирай бесплатно.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;900&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#000;--surface:#15110e;--line:#2a221c;--text:#f3eee6;--muted:#a1968c;
+  --claude:#d97757;--violet:#b08cff;--mint:#4fd19a;
+  --display:"Unbounded",system-ui,sans-serif;--body:"Golos Text",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font:400 16px/1.5 var(--body);-webkit-font-smoothing:antialiased}
+:focus-visible{outline:2px solid var(--text);outline-offset:3px;border-radius:6px}
+.wrap{max-width:460px;margin:0 auto;padding:48px 18px 36px}
+
+/* three-color ring = the three products */
+.me{display:flex;flex-direction:column;align-items:center;text-align:center}
+.ring{width:104px;height:104px;border-radius:50%;padding:4px;background:conic-gradient(var(--claude) 0 33.3%,var(--violet) 0 66.6%,var(--mint) 0)}
+.ring div{width:100%;height:100%;border-radius:50%;background:var(--bg);display:grid;place-items:center;font:900 44px var(--display);letter-spacing:-.04em}
+h1{font:900 26px/1.1 var(--display);margin-top:18px;letter-spacing:-.02em}
+.tag{color:var(--muted);margin-top:8px;max-width:30ch}
+
+.label{color:var(--muted);font-size:14px;margin:34px 0 10px}
+.links{display:grid;gap:10px}
+.link{--c:var(--text);display:grid;grid-template-columns:6px 1fr auto;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px 16px 16px 14px;color:var(--text);text-decoration:none;transition:border-color .15s}
+.link::before{content:"";align-self:stretch;border-radius:4px;background:var(--c)}
+.link:hover{border-color:var(--c)}
+.link b{display:block;font:700 17px/1.25 var(--display)}
+.link span{display:block;color:var(--muted);font-size:14px;margin-top:3px}
+.link em{font-style:normal;font:700 12px var(--display);color:#000;background:var(--c);border-radius:8px;padding:5px 8px;white-space:nowrap}
+.claude{--c:var(--claude)}.violet{--c:var(--violet)}.mint{--c:var(--mint)}
+
+.paid{border-color:var(--violet)}
+.dm{border-style:dashed}
+
+.socials{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:10px}
+.socials a{color:var(--text);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-weight:500;font-size:15px}
+.socials a:hover{border-color:var(--text)}
+footer{color:var(--muted);font-size:12px;text-align:center;margin-top:36px}
+@media (prefers-reduced-motion:reduce){.link{transition:none}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="me">
+    <div class="ring" aria-hidden="true"><div>Т</div></div>
+    <h1>Татьяна</h1>
+    <p class="tag">Строю личный бренд и продукты с ИИ. Показываю, как делаю контент, сайты и игры с Claude.</p>
+  </header>
+
+  <p class="label">Забирай бесплатно</p>
+  <nav class="links">
+    <a class="link claude" href="https://tannyff.github.io/claude-start/"><div><b>Claude с нуля</b><span>Пошаговый гайд от регистрации до первой игры</span></div><em>Гайд</em></a>
+    <a class="link violet" href="https://tannyff.github.io/ai-prompts-guide/"><div><b>20 промптов для контента</b><span>Впиши свою тему, и они подстроятся под твой блог</span></div><em>Промпты</em></a>
+    <a class="link mint" href="https://tannyff.github.io/tannyff-templates/"><div><b>5 шаблонов</b><span>Контент-план, отчёт по блогу, КП и бриф</span></div><em>Шаблоны</em></a>
+  </nav>
+
+  <p class="label">Для тех, кто хочет больше</p>
+  <nav class="links">
+    <a class="link violet paid" href="https://tannyff.github.io/ai-prompts-guide/#buy"><div><b>50 промптов + шаблон контент-плана</b><span>5 категорий, Excel-шаблон и PDF</span></div><em>990 ₽</em></a>
+    <a class="link claude dm" href="https://ig.me/m/tannyff_m"><div><b>Интенсив «Рилс через Claude»</b><span>Напиши в директ ИНТЕНСИВ, чтобы узнать о старте первой</span></div><em>Скоро</em></a>
+  </nav>
+
+  <p class="label" style="text-align:center">Я в соцсетях</p>
+  <div class="socials" id="socials"></div>
+
+  <footer>© Татьяна, 2026</footer>
+</main>
+<script>
+// впиши ссылку, чтобы кнопка появилась; пустые не показываются
+const SOCIALS=[
+  ["Instagram","https://www.instagram.com/tannyff_m/"],
+  ["Threads","https://www.threads.net/@tannyff_m"],
+  ["Telegram",""],
+  ["ВКонтакте",""],
+  ["YouTube",""]
+];
+const box=document.getElementById('socials');
+SOCIALS.filter(s=>s[1]).forEach(([name,url])=>{
+  const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';a.textContent=name;box.appendChild(a);
+});
+</script>
+</body>
+</html>
