@@ -15,7 +15,7 @@
 <style>
 :root{
   --bg:#000;--surface:#15110e;--line:#2a221c;--text:#f3eee6;--muted:#a1968c;
-  --claude:#d97757;--violet:#b08cff;--mint:#4fd19a;
+  --claude:#d97757;--violet:#b08cff;--mint:#4fd19a;--rose:#E8667A;
   --display:"Unbounded",system-ui,sans-serif;--body:"Golos Text",system-ui,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -23,10 +23,17 @@ body{background:var(--bg);color:var(--text);font:400 16px/1.5 var(--body);-webki
 :focus-visible{outline:2px solid var(--text);outline-offset:3px;border-radius:6px}
 .wrap{max-width:460px;margin:0 auto;padding:48px 18px 36px}
 
-/* three-color ring = the three products */
+/* orbit: one dot per free material, colors match the links below */
 .me{display:flex;flex-direction:column;align-items:center;text-align:center}
-.ring{width:104px;height:104px;border-radius:50%;padding:4px;background:conic-gradient(var(--claude) 0 33.3%,var(--violet) 0 66.6%,var(--mint) 0)}
-.ring div{width:100%;height:100%;border-radius:50%;background:var(--bg);display:grid;place-items:center;font:900 44px var(--display);letter-spacing:-.04em}
+.av{width:124px;height:124px;position:relative;display:grid;place-items:center}
+.orbit{position:absolute;inset:0;border-radius:50%;border:1px solid #3a2f27;animation:spin 40s linear infinite}
+.orbit i{position:absolute;width:10px;height:10px;border-radius:50%;left:50%;top:50%;margin:-5px 0 0 -5px}
+.orbit i:nth-child(1){background:var(--claude);transform:rotate(20deg) translateY(-62px)}
+.orbit i:nth-child(2){background:var(--violet);transform:rotate(110deg) translateY(-62px)}
+.orbit i:nth-child(3){background:var(--mint);transform:rotate(200deg) translateY(-62px)}
+.orbit i:nth-child(4){background:var(--rose);transform:rotate(290deg) translateY(-62px)}
+.letter{width:92px;height:92px;border-radius:50%;background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;font:900 42px var(--display);letter-spacing:-.04em;position:relative}
+@keyframes spin{to{transform:rotate(360deg)}}
 h1{font:900 26px/1.1 var(--display);margin-top:18px;letter-spacing:-.02em}
 .tag{color:var(--muted);margin-top:8px;max-width:30ch}
 
@@ -38,7 +45,7 @@ h1{font:900 26px/1.1 var(--display);margin-top:18px;letter-spacing:-.02em}
 .link b{display:block;font:700 17px/1.25 var(--display)}
 .link span{display:block;color:var(--muted);font-size:14px;margin-top:3px}
 .link em{font-style:normal;font:700 12px var(--display);color:#000;background:var(--c);border-radius:8px;padding:5px 8px;white-space:nowrap}
-.claude{--c:var(--claude)}.violet{--c:var(--violet)}.mint{--c:var(--mint)}
+.claude{--c:var(--claude)}.violet{--c:var(--violet)}.mint{--c:var(--mint)}.rose{--c:var(--rose)}
 
 .paid{border-color:var(--violet)}
 .dm{border-style:dashed}
@@ -47,13 +54,13 @@ h1{font:900 26px/1.1 var(--display);margin-top:18px;letter-spacing:-.02em}
 .socials a{color:var(--text);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-weight:500;font-size:15px}
 .socials a:hover{border-color:var(--text)}
 footer{color:var(--muted);font-size:12px;text-align:center;margin-top:36px}
-@media (prefers-reduced-motion:reduce){.link{transition:none}}
+@media (prefers-reduced-motion:reduce){.link{transition:none}.orbit{animation:none}}
 </style>
 </head>
 <body>
 <main class="wrap">
   <header class="me">
-    <div class="ring" aria-hidden="true"><div>Т</div></div>
+    <div class="av" aria-hidden="true"><div class="orbit"><i></i><i></i><i></i><i></i></div><div class="letter">Т</div></div>
     <h1>Татьяна</h1>
     <p class="tag">Строю личный бренд и продукты с ИИ. Показываю, как делаю контент, сайты и игры с Claude.</p>
   </header>
@@ -63,6 +70,7 @@ footer{color:var(--muted);font-size:12px;text-align:center;margin-top:36px}
     <a class="link claude" href="https://tannyff.github.io/claude-start/"><div><b>Claude с нуля</b><span>Пошаговый гайд от регистрации до первой игры</span></div><em>Гайд</em></a>
     <a class="link violet" href="https://tannyff.github.io/ai-prompts-guide/"><div><b>20 промптов для контента</b><span>Впиши свою тему, и они подстроятся под твой блог</span></div><em>Промпты</em></a>
     <a class="link mint" href="https://tannyff.github.io/tannyff-templates/"><div><b>5 шаблонов</b><span>Контент-план, отчёт по блогу, КП и бриф</span></div><em>Шаблоны</em></a>
+    <a class="link rose" href="https://tannyff.github.io/shrifty/"><div><b>Шрифты и палитры</b><span>30 шрифтов с кириллицей, пары для обложек и 19 палитр</span></div><em>Подборка</em></a>
   </nav>
 
   <p class="label">Для тех, кто хочет больше</p>
