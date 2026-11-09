@@ -56,6 +56,23 @@ h1{font:900 26px/1.1 var(--display);margin-top:18px;letter-spacing:-.02em}
 footer{color:var(--muted);font-size:12px;text-align:center;margin-top:36px}
 @media (prefers-reduced-motion:reduce){.link{transition:none}.orbit{animation:none}}
 </style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=114142975', 'ym');
+
+    ym(114142975, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/114142975" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<script>
+// цели Метрики: любой элемент с data-goal="имя" отправляет цель при клике
+document.addEventListener('click',function(e){var g=e.target.closest&&e.target.closest('[data-goal]');if(g&&window.ym)ym(114142975,'reachGoal',g.dataset.goal)});
+</script>
 </head>
 <body>
 <main class="wrap">
@@ -67,16 +84,16 @@ footer{color:var(--muted);font-size:12px;text-align:center;margin-top:36px}
 
   <p class="label">Забирай бесплатно</p>
   <nav class="links">
-    <a class="link claude" href="https://tannyff.github.io/claude-start/"><div><b>Claude с нуля</b><span>Пошаговый гайд от регистрации до первой игры</span></div><em>Гайд</em></a>
-    <a class="link violet" href="https://tannyff.github.io/ai-prompts-guide/"><div><b>20 промптов для контента</b><span>Впиши свою тему, и они подстроятся под твой блог</span></div><em>Промпты</em></a>
-    <a class="link mint" href="https://tannyff.github.io/tannyff-templates/"><div><b>5 шаблонов</b><span>Контент-план, отчёт по блогу, КП и бриф</span></div><em>Шаблоны</em></a>
-    <a class="link rose" href="https://tannyff.github.io/shrifty/"><div><b>Шрифты и палитры</b><span>30 шрифтов с кириллицей, пары для обложек и 19 палитр</span></div><em>Подборка</em></a>
+    <a class="link claude" href="https://tannyff.github.io/claude-start/" data-goal="go_claude"><div><b>Claude с нуля</b><span>Пошаговый гайд от регистрации до первой игры</span></div><em>Гайд</em></a>
+    <a class="link violet" href="https://tannyff.github.io/ai-prompts-guide/" data-goal="go_prompts"><div><b>20 промптов для контента</b><span>Впиши свою тему, и они подстроятся под твой блог</span></div><em>Промпты</em></a>
+    <a class="link mint" href="https://tannyff.github.io/tannyff-templates/" data-goal="go_templates"><div><b>5 шаблонов</b><span>Контент-план, отчёт по блогу, КП и бриф</span></div><em>Шаблоны</em></a>
+    <a class="link rose" href="https://tannyff.github.io/shrifty/" data-goal="go_fonts"><div><b>Шрифты и палитры</b><span>30 шрифтов с кириллицей, пары для обложек и 19 палитр</span></div><em>Подборка</em></a>
   </nav>
 
   <p class="label">Для тех, кто хочет больше</p>
   <nav class="links">
-    <a class="link violet paid" href="https://tannyff.github.io/ai-prompts-guide/#buy"><div><b>50 промптов + шаблон контент-плана</b><span>5 категорий, Excel-шаблон и PDF</span></div><em>990 ₽</em></a>
-    <a class="link claude dm" href="https://ig.me/m/tannyff_m"><div><b>Интенсив «Рилс через Claude»</b><span>Напиши в директ ИНТЕНСИВ, чтобы узнать о старте первой</span></div><em>Скоро</em></a>
+    <a class="link violet paid" href="https://tannyff.github.io/ai-prompts-guide/#buy" data-goal="go_paid"><div><b>50 промптов + шаблон контент-плана</b><span>5 категорий, Excel-шаблон и PDF</span></div><em>990 ₽</em></a>
+    <a class="link claude dm" href="https://ig.me/m/tannyff_m" data-goal="go_intensive"><div><b>Интенсив «Рилс через Claude»</b><span>Напиши в директ ИНТЕНСИВ, чтобы узнать о старте первой</span></div><em>Скоро</em></a>
   </nav>
 
   <p class="label" style="text-align:center">Я в соцсетях</p>
